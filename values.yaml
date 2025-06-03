@@ -1,0 +1,28 @@
+replicaCount: 1
+
+env:
+  TZ: Asia/Kolkata
+
+image:
+  repository: gitlab/gitlab-ce
+  tag: latest
+  pullPolicy: IfNotPresent
+
+service:
+  type: ClusterIP
+  portHttp: 80
+  portHttps: 443
+  portSsh: 22
+
+persistence:
+  enabled: true
+  storageClass: microk8s-hostpath
+  accessModes:
+    - ReadWriteOnce
+  size: 10Gi
+
+ingress:
+  enabled: true
+  host: gitlab.local
+
+resources: {}
