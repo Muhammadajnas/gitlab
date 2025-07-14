@@ -42,7 +42,7 @@ microk8s enable dns ingress storage
 
 
 ```bash
-git clone https://github.com/muhammadajnas/gitlab.git
+git clone https://github.com/Muhammadajnas/gitlab.git
 cd gitlab
 
 helm install gitlab ./
